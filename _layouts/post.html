@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<article id="main">
+
+  <header>
+    <h2>{{ page.title }}</h2>
+
+		<span>Posted on </span><span class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</span>
+  </header>
+
+  <section class="wrapper">
+    <div class="inner" id="posting">
+
+      <h4>{{ page.strap }}</h4>
+      {{ content }}
+    </div>
+  </section>
+
+
+
+
+
+<div id="post-nav">
+  {% if page.next.url %}
+	<div class="next">
+
+		<a href="{{ site.baseurl }}{{ page.next.url }}">
+			<span>Next: </span>
+			{{ page.next.title }}
+		</a>
+	</div>
+  {% endif %}
+
+{% if page.previous.url %}
+	<div class="previous">
+		<a href="{{ site.baseurl }}{{ page.previous.url }}">
+			<span>Previous: </span>
+			{{ page.previous.title }}
+		</a>
+	</div>
+		{% endif %}
+</div>
+
+</article>

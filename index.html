@@ -1,0 +1,123 @@
+---
+title:
+layout: landing
+---
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>{{ site.title }}</h2>
+							<!-- {{ site.description | markdownify }} -->
+						<!--	<ul class="actions">
+								<li><a href="latest.html" class="button fit">Latest</a></li>
+							</ul>
+							//-->
+						</div>
+						<a href="#one" class="more scrolly">&nbsp;</a>
+					</section>
+
+					<section class="spotlight">
+						<div class="image"><img src="images/portrait.jpg" alt="" /></div><div class="content">
+							<h2>Adam Dix</h2>
+							<p  id="one">Dix’ paintings discuss a borderland between the virtual and real world, whilst exploring how humanity adapts to new modes of communication.</p>
+<p>Dix lives and works in London and his work has been shown nationally and internationally, as well as being held in private and public collections around the world.</p>
+							<ul>
+								<li><a href="biography.html">Artist's statement and biography</a></li>
+								<li><a href="works.html">Works</a></li>
+								<li><a href="latest.html">Latest shows and news</a></li>
+								<li><a href="contact.html">Contact</a></li>
+							</ul>
+
+
+								<div class="buttonholder"><a href="works.html" class="button fit">View works</a></div>
+
+
+
+						</div>
+					</section>
+
+					<section id="two" class="wrapper alt style2">
+						<section class="spotlight">
+
+
+
+
+								{% for post in site.posts limit:1 %}
+
+								<div class="image"><img src="{{ site.baseurl }}/images/{{post.thumbnail}}"></div>
+
+
+								<div class="content">
+
+									<h2>Latest</h2>
+								<h3 class="latest-link">
+									<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+								</h3>
+								</header>
+
+								<div class="entry-content">
+
+								<p>{{ post.strap }} <a href="{{ post.url | prepend: site.baseurl }}">Read more</a></p>
+
+								<div class="buttonholder"><a href="latest.html" class="button fit">More news</a></div>
+
+								{% endfor %}
+
+
+
+
+
+
+
+							</div>
+						</section>
+
+
+
+						<section class="wrapper instagram">
+					    <div class="inner">
+								<div class="row">
+								<div class="1u 3u(medium)">
+									<img src="{{ site.baseurl }}/images/insta.png" width="50px" align="right">
+								</div>
+								<div class="11u 9u(medium)">
+								<h2>Instagram</h2>
+							</div>
+						</DIV><!--/ROW-->
+
+								<!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/3b158bf478a45c55a1d7839ec7bcbe0f.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; padding-right: 20px;overflow: hidden; background-color:rgba(144,144,144,0.25);"></iframe>
+								<div class="insta">
+								<p><a href="https://www.instagram.com/adammdix/">Follow Adam on instagram</a></p>
+							</div>
+						</section>
+
+
+
+				<!-- Three -->
+					<section id="three" class="wrapper">
+						<div class="inner">
+							<header class="major">
+								<div class="row">
+								<div class="6u 12u$(medium)">
+
+								<h3>Editions Available from</h3>
+
+								<p><a href="http://www.jealousgallery.com/artists/adam-dix">Jealous Gallery</a></p>
+								<p><a href="https://othercriteria.com/uk/contemporary-art/adam-dix">Other Criteria</a>
+								<p><a href="https://www.artsy.net/artist/adam-dix">Artsy</a></p>
+								</p>
+								</div>
+
+								<div class="6u 12u$(medium)">
+								<h3>Featured Elsewhere</h3>
+
+								<p><a href="http://www.sletegallery.com/artists/adam_dix/">Slete Gallery </a>
+								<br /><a href="https://elevenfineart.com/pages/adam-dix">Eleven Gallery</a>
+								<br /><a href="http://www.contemporaryartsociety.org/artist-members/adam-dix/">Contempoary Arts Society</a>
+								<br /><a href="http://charliesmithlondon.com/artists/adam-dix/">Charlie Smith London</a>
+								</p>
+								</div>
+								</div>
+							</header>
+
+						</div>
+					</section>

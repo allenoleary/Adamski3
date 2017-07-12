@@ -1,0 +1,53 @@
+---
+title: Compact list
+layout:
+subtitle:
+ignore: true
+---
+<head>
+  <title>Adam Dix | Print version of catalogue</title>
+  <link rel="stylesheet" href="css/print.css">
+</head>
+
+	<body style="bgcolor: white; text-align: center">
+
+
+<h2>Adam Dix</h2>
+
+<h3>Compact works listing.</h3>
+
+<p><a HREF="javascript:window.print()">Click to Print This Page</a></p>
+
+<div class="print">
+
+
+
+
+
+<table cellpadding="10" cellspacing="10" id="printme" align="center">
+
+
+
+
+
+
+    {% assign work_items = site.works | sort: 'year' | reverse %}
+    {% for work_item in work_items limit:1000  %}
+
+  <tr>
+
+<td><b>{{ work_item.title }}</b> - {{ work_item.year  }}  - {{ work_item.description }}  - {{ work_item.size }}
+	{% if work_item.collected == 'Y' %}
+		- Collected.
+	{% endif %}
+
+</td><!-- /item-->
+</tr>
+
+
+{% endfor %}
+
+</table>
+
+</body>
+</html>

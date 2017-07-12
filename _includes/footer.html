@@ -1,0 +1,16 @@
+<!-- Footer -->
+<footer id="footer">
+  <ul class="icons">
+    <li><a target="_blank" href="https://www.instagram.com/adammdix/" alt="Adam on instagram"><img src="{{ site.baseurl }}/images/ig.png" width="36px"></a>
+         </li>
+  </ul>
+  <ul class="copyright">
+    <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
+
+    {{ thisyear }}
+    {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+  </ul>
+  <ul class="credit">
+    <li>Site by <a href="http://www.allenoleary.co.uk" target="_blank">allen</a></li>
+  </ul>
+</footer>

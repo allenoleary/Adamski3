@@ -1,0 +1,67 @@
+---
+title: Catalogue
+layout:
+subtitle: Works
+ignore: true
+---
+<head>
+  <title>Adam Dix | Print version of catalogue</title>
+  <link rel="stylesheet" href="css/print.css">
+</head>
+
+	<body style="bgcolor: white; text-align: center">
+
+
+<h2>Adam Dix</h2>
+
+<h3>Catalogue.</h3>
+
+<p><a HREF="javascript:window.print()">Click to Print This Page</a>&nbsp;</p>
+
+<div class="print">
+
+
+
+
+
+<table cellpadding="10" cellspacing="10" id="printme" align="center">
+
+
+
+
+  <tr><td>
+
+    {% assign work_items = site.works | sort: 'year' | reverse %}
+    {% for work_item in work_items limit:100  %}
+
+
+{% capture thecycle %}{% cycle '1', '2', '3' %}{% endcapture %}
+{% if thecycle == '1' %}
+
+<tr>
+  <td><img src="{{ site.baseurl }}images/blackpx.png" width="220px" height="1px"></td>
+  <td><img src="{{ site.baseurl }}images/blackpx.png" width="220px" height="1px"></td>
+  <td><img src="{{ site.baseurl }}images/blackpx.png" width="220px" height="1px"></td>
+</tr>
+
+
+
+{% endif %}
+<td>
+<img src="{{ site.baseurl }}{{ work_item.thumbnail }}_sm.jpg"  style="max-width:150pt; max-height: 150pt;text-align: center">
+<br />
+
+
+	<b>{{ work_item.title }}</b><br /> {{ work_item.year  }} <br />  {{ work_item.description }} <br />{{ work_item.size }}
+	{% if work_item.collected == 'Y' %}
+		<br />In private collection.
+	{% endif %}
+
+</td><!-- /item-->
+
+
+{% endfor %}
+</table>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+---
+title: Works
+subtitle:
+layout:
+description: Works
+order: 3
+
+---
+
+
+
+  <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Works</title>
+<meta name="description" content="Artist and object maker">
+<!--[if lte IE 8]><script src="/test/js/ie/html5shiv.js"></script><![endif]-->
+<link rel="canonical" href="/works.html">
+<link rel="stylesheet" href="/css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="/test/css/ie8.css" /><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" href="/test/css/ie9.css" /><![endif]-->
+<link rel="alternate" type="application/rss+xml" title="Adam Dix" href="/test/feed.xml">
+
+</head>
+
+      <body>
+
+      <!-- Page Wrapper -->
+      <div id="page-wrapper">
+
+        <!-- Header -->
+
+    {% include header.html %}
+
+
+        <article id="main">
+
+          <article id="main">
+
+            <header>
+              <h2>Works</h2>
+              <p></p>
+            </header>
+
+
+
+          </article>
+
+    <section class="wrapper style5">
+      <div class="inner">
+
+
+
+<div class="row 12u">
+        <p>	Dix’ palette of muted colours, hazy imagery and subject, anchor the work in a time of historical optimism. Referring to the imagined futures of our predecessors his deployment of colour links the subject of contemporary technology to its 1950s origins. This has led to the production of work that invites the viewer to engage in a secular celebration, whilst questioning past and present forms of ‘social networking’ within community and the common ground that may exist between them and their effect on society.&nbsp;</p>
+      </div>
+
+      </div>
+
+      <section>
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/photos.css">
+
+        <div class="buttonholder"><a href="print.html" class="button fit" target="_blank">Print version</a></div>
+
+        <h3></h3>
+        <div id="photos">
+
+          {% assign work_items = site.works | sort: 'year' | reverse %}
+          {% for work_item in work_items limit:100  %}
+
+
+          <div class="adamimage"><a class="example-image-link" href="{{ site.baseurl }}{{ work_item.thumbnail }}.jpg" data-lightbox="example-set" data-title="{{ work_item.title }} ({{ work_item.year }})<br /> {{ work_item.description }}<br /> {{ work_item.size }}
+
+            {% if work_item.collected == 'Y' %}
+              <br />Private collection
+            {% endif %}
+
+
+
+
+            ">
+              <img class="example-image" src="{{ site.baseurl }}{{ work_item.thumbnail }}_sm.jpg" alt="{{ work_item.title }}<br />{{ work_item.year }} {{ work_item.description }} {{ work_item.size }}" /></a></div>
+
+
+        {% endfor %}
+      </div>
+
+      </section>
+
+
+
+
+			</div><!--/main-->
+		</div>
+</article>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a target="_blank" href="https://www.instagram.com/adammdix/" alt="Adam on instagram"><img src="{{ site.baseurl }}/images/ig.png" width="36px"></a>
+             </li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; {% assign thisyear = site.time | date: "%Y" %}
+        {{ thisyear }}
+        {% if site.owner %}{{ site.owner }}{% else %}{{ site.title }}{% endif %}</li>
+      </ul>
+      <ul class="credit">
+        <li>Site by <a href="http://www.allenoleary.co.uk" target="_blank">allen </a></li>
+      </ul>
+    </footer>
+
+
+
+
+    <script src="js/jquery.min.js"></script>
+          <script src="js/lightbox.js"></script>
+                    <script src="js/main.js"></script>
+
+
+<script>
+         lightbox.option({
+             'resizeDuration': 200,
+             'alwaysShowNavOnTouchDevices': true
+         });
+     </script>
+
+
+
+
+	</body>
+</html>
